@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.094a8636.css",
-    "main.js": "/static/js/main.f8da5932.js",
-    "static/js/787.b93dee86.chunk.js": "/static/js/787.b93dee86.chunk.js",
-    "static/media/scene.jpg": "/static/media/scene.3224a985e4422cad1236.jpg",
-    "static/media/user.svg": "/static/media/user.cb396ad1d880387535db.svg",
-    "index.html": "/index.html",
-    "main.094a8636.css.map": "/static/css/main.094a8636.css.map",
-    "main.f8da5932.js.map": "/static/js/main.f8da5932.js.map",
-    "787.b93dee86.chunk.js.map": "/static/js/787.b93dee86.chunk.js.map"
+    "main.css": "/agri_iot/static/css/main.ab51ac8f.css",
+    "main.js": "/agri_iot/static/js/main.49e859a8.js",
+    "static/js/787.b93dee86.chunk.js": "/agri_iot/static/js/787.b93dee86.chunk.js",
+    "static/media/scene.jpg": "/agri_iot/static/media/scene.3224a985e4422cad1236.jpg",
+    "static/media/user.svg": "/agri_iot/static/media/user.cb396ad1d880387535db.svg",
+    "index.html": "/agri_iot/index.html",
+    "main.ab51ac8f.css.map": "/agri_iot/static/css/main.ab51ac8f.css.map",
+    "main.49e859a8.js.map": "/agri_iot/static/js/main.49e859a8.js.map",
+    "787.b93dee86.chunk.js.map": "/agri_iot/static/js/787.b93dee86.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.094a8636.css",
-    "static/js/main.f8da5932.js"
+    "static/css/main.ab51ac8f.css",
+    "static/js/main.49e859a8.js"
   ]
 }
