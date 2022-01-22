@@ -9,7 +9,7 @@ function Navbar() {
         <div className="Navbar">
          &emsp;
         <div className="navtitle">
-           <h3>{pathname}</h3> 
+           <h3>Version 1.0 Released:17/01/2022</h3> 
         </div>
            <div className="profile">
             <HiUserCircle fontSize={40} />

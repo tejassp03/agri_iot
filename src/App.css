@@ -70,7 +70,7 @@ flex: 1;
   font-weight: 600;
   color: white;
   justify-content: center;
-  margin-bottom: 2% !important;
+  
   
 }
 .SidebarRow #icon {
@@ -82,11 +82,12 @@ flex: 1;
 .SidebarRow #title {
   flex:70%;
 }
-.SidebarItems #active {
+.SidebarItems .active {
  
   /* border-radius: 10px; */
   background: rgba(0, 0, 0, 0.2);
 }
+
 .SidebarRow:hover
 {
   
@@ -255,7 +256,6 @@ tr,td
   justify-content: center;
 }
 
-
 .tabledesign
 {
   position: relative;
@@ -295,6 +295,15 @@ border: 2px solid #34a2b9;
 width: 20%;
 background-color:rgb(244, 249, 250);
 }
+.sensoritem input[type="number"]
+{
+  font-weight: 600;
+  padding: 5px;
+border: 2px solid #34a2b9;
+/* border-radius: 5px; */
+width: 20%;
+background-color:rgb(244, 249, 250);
+}
 .removeCircle
 {
   color: rgb(255, 117, 117);
@@ -318,6 +327,30 @@ background-color:rgb(244, 249, 250);
   border: none;
   background-color:#34a2b9;
   border-radius: 5px;
+}
+.TabButton
+{
+  
+  margin-top: 1%;
+  color:white;
+  
+  font-weight: 500;
+  font-size: 16px;
+ display: inline-flex;
+ padding: 10px;
+  border: none;
+  background-color:#34a2b9;
+  /* border-radius: 5px; */
+}
+.TabButton:hover
+{
+  cursor: pointer;
+  background-color:#2d92a7;
+}
+.TabActive
+{
+  
+  background-color:#eeeeee !important;
 }
 .addButton:hover
 {
@@ -360,4 +393,28 @@ background-color:rgb(244, 249, 250);
 {
   padding: 10px;
   
+}
+
+.locationDropdown
+{
+  font-weight: 600;
+padding: 10px;
+border: 2px solid #34a2b9;
+/* border-radius: 5px; */
+width: 12%;
+margin: 10px;
+background-color:rgb(244, 249, 250);
+font-size: 14px;
+}
+.locationDropdown:hover
+{
+  cursor: pointer;
+}
+.locationDropdown>option
+{
+  font-size:18px;
+  font-weight:500;
+}
+::-webkit-scrollbar {
+  display: none;
 }

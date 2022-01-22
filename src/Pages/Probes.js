@@ -81,17 +81,18 @@ setProbes([...probes,{probedesc:"",probeid:"",sensorstate:""}]);
             <tr key={i} className="sensoritem">
                 <td><h3>{i+1}</h3></td>
                 <td> 
-                <select name="probedesc" id="probedesc" value={item.probedesc} onChange={e =>handleChange(e,i)} >
-                <option value="" hidden  disabled>Select Probe</option>
-                <option value="Light Level">Light Level</option>
-                <option value="Temperature">Temperature</option>
-                <option value="Humidity">Humidity</option>
-                <option value="Occupancy Sensor">Occupancy Sensor</option>
-                <option value="Air Flow">Air Flow</option>
-                </select>    
+                <input type="text" id="1" name="probeid" value={item.probeid} onChange={e =>handleChange(e,i)}  />
+                
                 </td>
                 <td>
-                    <input type="text" id="1" name="probeid" value={item.probeid} onChange={e =>handleChange(e,i)}  />
+                <select name="probedesc" id="probedesc" value={item.probedesc} onChange={e =>handleChange(e,i)} >
+                <option value="" hidden  disabled>Select Probe</option>
+                <option value="CAT1">CAT1</option>
+                <option value="CAT2">CAT2</option>
+                <option value="CAT3">CAT3</option>
+                <option value="CAT4">CAT4</option>
+               
+                </select>    
                 </td>
                 <td>
                     <MdOutlineDeleteForever onClick={() => handleRemove(i)} fontSize={35} className="removeCircle" />

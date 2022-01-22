@@ -41,25 +41,28 @@ function App() {
         console.log('Logout');
     };
   return (
-    <div className="App">
+ 
+ <div className="App">
     {(user.email =="") ? (<>
+      <Router>
       <div className="first">
    <Sidebar />   
     </div>
    <div className="Second">
      <Navbar />
      <div className="lower">
-  <Router>
+  
     <Routes>
-      <Route exact path="/" element={<Home />} />
+      <Route exact path="/" element={<Sensors />} />
       <Route  path="/Sensors" element={<Sensors />} />
       <Route  path="/Probes" element={<Probes />} />
-      <Route path="/SpaceConfig" element={<SpaceConfig />} />
+      <Route  path="/SpaceConfig/*" element={<SpaceConfig />} />
     </Routes>
-  </Router>
+ 
      </div>
      
     </div>
+    </Router> 
 </>
     ) : (
 
