@@ -81,7 +81,7 @@ setProbes([...probes,{probedesc:"",probeid:"",sensorstate:""}]);
             <tr key={i} className="sensoritem">
                 <td><h3>{i+1}</h3></td>
                 <td> 
-                <input type="text" id="1" name="probeid" value={item.probeid} onChange={e =>handleChange(e,i)}  />
+                <input type="text" id="1" name="probeid" style={{width:'30%'}}  value={item.probeid} onChange={e =>handleChange(e,i)}  />
                 
                 </td>
                 <td>

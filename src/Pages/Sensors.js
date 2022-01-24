@@ -93,7 +93,7 @@ setSensors([...sensors,{sensordesc:"",sensorid:"",sensorstate:""}]);
                 </select>    
                 </td>
                 <td>
-                    <input type="text" id="1" name="sensorid" value={item.sensorid} onChange={e =>handleChange(e,i)}  />
+                    <input type="text" id="1" name="sensorid" style={{width:'20%'}} value={item.sensorid} onChange={e =>handleChange(e,i)}  />
                 </td>
                 <td>
                 <select name="sensorstate" id="sensorstate" value={item.sensorstate} onChange={e =>handleChange(e,i)}>

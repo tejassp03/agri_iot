@@ -7,7 +7,18 @@ function SpaceProbes() {
     const [probes,setProbes]=useState([
         {
         probedesc:"",
-        probeid:""
+        probeid:"",
+        suid:"",
+        level:"",
+        oflag:"",
+        autooverride:"",
+        stdmode:"",
+        im:"",
+        mm:"",
+        am:"",
+        som:"",
+
+
         
         }
 ]);
@@ -51,7 +62,7 @@ function SpaceProbes() {
 
 
   const handleAdd = () => {
-setProbes([...probes,{probedesc:"",probeid:"",sensorstate:""}]);
+setProbes([...probes,{probedesc:"",probeid:"",suid:"",level:"",oflag:"",autooverride:"",stdmode:"",im:"",mm:"",am:"",som:""}]);
   }
   const handleRemove = index => {
     const list=[...probes];
@@ -65,7 +76,7 @@ setProbes([...probes,{probedesc:"",probeid:"",sensorstate:""}]);
         <br />
         <div className="tabledesign" style={{width:'96%'}}>
         <div style={{display:'block',overflowX:'scroll'}}>
-        <table className="sensorgroup" style={{width:'150%',tableLayout:'fixed'}}>
+        <table className="sensorgroup" style={{width:'max-content',tableLayout:'fixed'}}>
          <thead>
            <tr>
                 <th>Sl No</th>

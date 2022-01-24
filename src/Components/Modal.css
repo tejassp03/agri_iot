@@ -1,0 +1,157 @@
+.modalBackground {
+   width: 100%;
+    position: absolute;
+    top: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContainer {
+    width: 60%;
+    position: relative;
+    height: 480px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    padding-bottom: 10px;
+
+    z-index: 10;
+  }
+  
+  .modalContainer .title {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .titleCloseBtn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .titleCloseBtn button {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  
+  .modalContainer .body {
+    flex: 60%;
+    display: flex;
+    
+    align-items: center;
+   
+    text-align: center;
+  }
+  
+  .modalContainer .footer {
+    flex:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContainer .footer button {
+    width: 92px;
+    height: 38px;
+    margin: 10px;
+    align-items: center;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  #cancelBtn {
+    background-color: crimson;
+  }
+  .sensoritem select
+{
+  font-weight: 600;
+padding: 5px;
+border: 2px solid #34a2b9;
+/* border-radius: 5px; */
+width: 60%;
+background-color:rgb(244, 249, 250);
+}
+select:hover
+{
+  cursor: pointer;
+}
+select>option
+{
+  font-size:16px;
+  font-weight:500;
+}
+input[type="text"]
+{
+  font-weight: 600;
+  padding: 5px;
+border: 2px solid #34a2b9;
+/* border-radius: 5px; */
+width: 20%;
+background-color:rgb(244, 249, 250);
+}
+input[type="number"]
+{
+  font-weight: 600;
+  padding: 5px;
+border: 2px solid #34a2b9;
+/* border-radius: 5px; */
+width: 20%;
+background-color:rgb(244, 249, 250);
+}
+input[type="time"]
+{
+  font-weight: 600;
+  padding: 5px;
+border: 2px solid #34a2b9;
+/* border-radius: 5px; */
+
+background-color:rgb(244, 249, 250);
+}
+.modalAdd:hover
+{
+  cursor: pointer;
+  background-color:#2d92a7;
+}
+.modalSubmit:hover
+{
+  cursor: pointer;
+  background-color:#168d12;
+}
+.modalSubmit
+{
+  
+  margin-top: 2%;
+  color:white;
+  font-weight: 500;
+  font-size: 16px;
+  display: inline-flex;
+ padding: 10px;
+  border: none;
+  background-color:#1fa51a;
+  border-radius: 5px;
+}
+.modalAdd
+{
+  position: absolute;
+  right: 40px;
+  top: 100px;
+  margin-top: 2%;
+  color:white;
+  font-weight: 500;
+  font-size: 14px;
+ display: inline-flex;
+ padding: 10px;
+  border: none;
+  background-color:#34a2b9;
+  border-radius: 5px;
+}

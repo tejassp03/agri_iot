@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { MdOutlineDeleteForever, MdRemoveCircle, MdSave, MdSensors } from 'react-icons/md'
-
+import '../Probes.css'
 function SpaceSensors() {
 
     const [sensors,setSensors]=useState([

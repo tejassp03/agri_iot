@@ -313,6 +313,15 @@ background-color:rgb(244, 249, 250);
   color: rgb(196, 3, 3);
   cursor: pointer;
 }
+.editButton
+{
+  color: black;
+}
+.editButton:hover
+{
+  color: rgb(18, 60, 150);
+  cursor: pointer;
+}
 .addButton
 {
   position: absolute;
