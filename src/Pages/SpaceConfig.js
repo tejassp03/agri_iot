@@ -18,14 +18,7 @@ function SpaceConfig(match) {
     return (
         <div>
         <div>
-        <select name="location" id="location" value={location.location} className="locationDropdown"  onChange={e =>setLocation(e.target.value)} >
-                <option value="" hidden selected disabled>Select Location</option>
-                <option value="Bengaluru">Bengaluru</option>
-                <option value="Hyderabad">Hyderabad</option>
-                <option value="New Dehli">New Dehli</option>
-                <option value="Kolkata">Kolkata</option>
-                
-                </select>   
+       
              <select name="space" id="space" value={location.space} className="locationDropdown"  onChange={e =>setLocation(e.target.value)} >
                 <option value="" hidden selected disabled>Select Space</option>
                 <option value="">Space 1</option>
@@ -36,7 +29,8 @@ function SpaceConfig(match) {
                 <option value="">Space 6</option>
                 
                 
-                </select>   
+            </select>  
+            <button className="TabButton" >Read Slave UID's</button> 
         </div>
             &emsp;
 

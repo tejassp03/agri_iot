@@ -66,7 +66,7 @@ setProbes([...probes,{slavedesc:"",slavetype:"",slavename:"",slaveuid:"",control
         {modalOpen && <Modal setOpenModal={setModalOpen} />}
         
         <div className="tabledesign" style={{width:'96%'}}>
-        <div style={{display:'block',overflowX:'scroll'}}>
+        <div style={{}}>
         <table className="sensorgroup" style={{width:'max-content',tableLayout:'fixed'}}>
         
          <thead>
