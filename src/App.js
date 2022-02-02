@@ -8,6 +8,7 @@ import SpaceConfig from './Pages/SpaceConfig';
 import { useState } from 'react';
 import AdminLogin from './Pages/AdminLogin';
 import UserLogin from './Pages/UserLogin';
+import Home from './Pages/Home';
 
 /* Created on 11/01/2022 by Tejas S P */
 function App() {
@@ -53,7 +54,7 @@ function App() {
      <div className="lower">
   
     <Routes>
-      <Route exact path="/" element={<Sensors />} />
+      <Route exact path="/" element={<Home />} />
       <Route  path="/Sensors" element={<Sensors />} />
       <Route  path="/Probes" element={<Probes />} />
       <Route  path="/SpaceConfig/*" element={<SpaceConfig />} />
@@ -68,7 +69,7 @@ function App() {
 
  
       
-   <AdminLogin Login={Login} error={error} />
+   <UserLogin Login={Login} error={error} />
   
 
     )}
@@ -81,13 +82,6 @@ function App() {
 }
 
 
-function Home() {
-  return (
-    <div>
-      <p>Home</p>
-    </div>
-  )
-}
 
 
 

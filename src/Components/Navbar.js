@@ -17,10 +17,10 @@ function Navbar() {
         <div className="Navbar">
          &emsp;
         <div className="navtitle">
-           <h3>Version 1.3 Released:28/01/2022</h3> 
+           <h3>Version 1.4 Released:02/02/2022</h3> 
         </div>
            <div className="profile">
-            <HiUserCircle fontSize={40} />
+            <h4>Logout &nbsp;</h4>
             </div>
             <select name="location" id="location" value={location.location} className="locationDropdown"  onChange={e =>setLocation(e.target.value)} >
                 <option value="" hidden selected disabled>Select Location</option>

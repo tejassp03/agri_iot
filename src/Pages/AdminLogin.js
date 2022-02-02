@@ -23,7 +23,7 @@ function AdminLogin({Login,error}) {
         
         <div className="inputgroup">
         <MdEmail className="inputicon"/>
-         <input type="text" name="email" placeholder="Enter Email" id="email" onChange={e=>setDetails({...details,email:e.target.value})} value={details.email}  />   
+         <input type="email" name="email" placeholder="Enter Email" id="email" onChange={e=>setDetails({...details,email:e.target.value})} value={details.email}  />   
         </div>
         <div className="inputgroup">
         <MdLock className="inputicon"/> 

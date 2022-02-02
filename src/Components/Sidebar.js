@@ -7,12 +7,17 @@ import { Link, NavLink } from "react-router-dom";
 function Sidebar() {
   return (
     <div className="Sidebar">
+    
       <div className="sidebarlogo">
         &nbsp;
+        <Link to='/' style={{textDecoration:'none',color:'white'}}>
         <h2>
           agri I<MdSensors className="logoicon" fontSize={30} />T
         </h2>
+        </Link>
       </div>
+    
+      
       <ul className="SidebarItems">
         {SidebarData.map((val, key) => {
           return (

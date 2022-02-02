@@ -66,7 +66,7 @@ function Modal({ setOpenModal }) {
     ];
 
 
-const handleChange = (e,index) => {
+const handleChangeP = (e,index) => {
       
     const {name,value} = e.target;
  
@@ -74,6 +74,17 @@ const handleChange = (e,index) => {
  
     list[index][name] = value;
     setProbes(list);
+    
+ 
+   }
+const handleChangeS = (e,index) => {
+      
+    const {name,value} = e.target;
+ 
+    const list=[...sensors];
+ 
+    list[index][name] = value;
+    setSensors(list);
     
  
    }
@@ -100,11 +111,17 @@ const handleChange = (e,index) => {
    }
 
 
-   const handleRemove = index => {
+   const handleRemoveProbes = index => {
      const list=[...probes];
      list.splice(index, 1);
      setProbes(list);
    }
+   const handleRemoveSensors = index => {
+     const list=[...sensors];
+     list.splice(index, 1);
+     setSensors(list);
+   }
+
   return (
     <div className="modalBackground">
       <div className="modalContainer">
@@ -135,40 +152,35 @@ const handleChange = (e,index) => {
         <thead>
         <tr style={{position:'sticky',top:0,backgroundColor:'white',paddingBottom:'10px'}}>
               
-               <th style={{fontSize:'18px',width:'20%'}}>Control Mode</th>
-               <th style={{fontSize:'18px'}}>Control Logic</th> 
-               <th style={{fontSize:'18px',width:'20%'}}>Slave State</th> 
-               <th style={{fontSize:'18px',width:'15%'}}>Sensors</th> 
-               <th style={{fontSize:'18px',width:'10%'}}>Remove</th> 
+               <th style={{fontSize:'16px',width:'15%'}}>Control Mode</th>
+               <th style={{fontSize:'16px'}}>Control Logic</th> 
+               <th style={{fontSize:'16px',width:'20%'}}>Slave State</th> 
+               <th style={{fontSize:'16px',width:'15%'}}>Sensors</th> 
+               <th style={{fontSize:'16px',width:'10%'}}>Remove</th> 
                
           </tr>
               
            </thead>
            <br />
    <tbody>
-   {probes.map((i)=>{
+   {probes.map((item,i)=>{
             return(
                 <>
    
            <tr key={i} className="sensoritem">
               
                <td > 
-               <select name="control" id="control" style={{width:'65%'}} value={item.control} onChange={e =>handleChange(e,i)} >
-                <option value="" hidden  disabled>Select Control</option>
-                <option value="Time">Time</option>
-                <option value="Sensors">Sensors</option>
-                
-                </select>   
+              <h3>Time</h3> 
                
                </td>
                
                <td >
                <div style={{display:'flex',flexDirection:'row',alignItems: 'center'}}>
-                    <h4 style={{wordBreak:'keep-all'}}>From</h4>&nbsp; <input type="time" id="1" name="sr" value={item.sr}  onChange={e =>handleChange(e,i)} style={{width:'65%'}}/> &nbsp;<h4 style={{wordBreak:'keep-all'}}>To</h4>&nbsp; <input type="time" id="1" name="ss" style={{width:'65%'}} value={item.ss} onChange={e =>handleChange(e,i)} />
+                    <h4 style={{wordBreak:'keep-all'}}>From</h4>&nbsp; <input type="time" id="1" name="sr" value={item.sr}  onChange={e =>handleChangeP(e,i)} style={{width:'65%'}}/> &nbsp;<h4 style={{wordBreak:'keep-all'}}>To</h4>&nbsp; <input type="time" id="1" name="ss" style={{width:'65%'}} value={item.ss} onChange={e =>handleChangeP(e,i)} />
                 </div>
                </td>
                <td > 
-               <select name="state" id="state" style={{width:'65%'}} value={item.state} onChange={e =>handleChange(e,i)} >
+               <select name="state" id="state" style={{width:'65%'}} value={item.state} onChange={e =>handleChangeP(e,i)} >
                 <option value="" hidden  disabled>Select State</option>
                 <option value="ON">ON</option>
                 <option value="OFF">OFF</option>
@@ -179,20 +191,20 @@ const handleChange = (e,index) => {
                     <MdSensors onClick={handleSensors} fontSize={35} className="removeCircle" />
                 </td>
                <td>
-                    <MdOutlineDeleteForever onClick={() => handleRemove(i)} fontSize={35} className="removeCircle" />
+                    <MdOutlineDeleteForever onClick={() => handleRemoveProbes(i)} fontSize={35} className="removeCircle" />
                 </td>
                
    </tr>
 
   
-{sensors.map((i)=>{
+{sensors.map((e,i)=>{
             return(
                 <>
 
               <tr key={i} className="sensoritem" style={{margin:'auto',justifyContent:'center'}}>
               <td > 
 
-               <select name="sensor" id="sensor" style={{width:'96%'}} value={item.time.sensor} onChange={e =>handleChange(e,i)} >
+               <select name="sensor" id="sensor" style={{width:'96%'}} value={item.time.sensor} onChange={e =>handleChangeS(e,i)} >
                 <option value="" hidden  disabled>Select Sensors</option>
                 <option value="OS">OS</option>
                 <option value="Temp">Temp</option>
@@ -201,10 +213,10 @@ const handleChange = (e,index) => {
                
                </td>
                <td>
-                <input type="text" placeholder="Enter Threshold" style={{width:'55%'}} value={item.time.sensorthreshold}  /> 
+                <input type="text" placeholder="Enter Threshold" style={{width:'55%'}} value={item.time.sensorthreshold}  onChange={e =>handleChangeS(e,i)}/> 
                </td>
                <td>
-               <select name="state" id="state" style={{width:'65%'}} value={item.time.status} onChange={e =>handleChange(e,i)} >
+               <select name="state" id="state" style={{width:'65%'}} value={item.time.status} onChange={e =>handleChangeS(e,i)} >
                 <option value="" hidden  disabled>Select State</option>
                 <option value="ON">ON</option>
                 <option value="OFF">OFF</option>
@@ -215,7 +227,7 @@ const handleChange = (e,index) => {
                    
                 </td>
                <td>
-                    <MdOutlineDeleteForever onClick={() => handleRemove(i)} fontSize={35} className="removeCircle" />
+                    <MdOutlineDeleteForever onClick={() => handleRemoveSensors(i)} fontSize={35} className="removeCircle" />
                 </td>
                
     </tr>
